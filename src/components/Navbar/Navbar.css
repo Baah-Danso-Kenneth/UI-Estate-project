@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primaryColor:#3959d7;
+  --primaryColorLight:hsl(223, 100%, 97%);
+  --primaryColorDark:hsl(216, 58%, 28%);
+  --gradientLight:rgb(114, 145,255);
+  --bgColor:hsl(0, 0%, 100%);
+  --formColor:hsl(20, 42%, 87%);
+  --whiteColor:#f5f5f9;
+  --blackColor:hsl(0, 0%, 18%);
+  --shadowColor:hsl(233, 3%, 51%);
+  --inputColor:hsl(330, 12%, 97%);
+  --cardColor:hsl(300, 3%, 94%);
+  --orangeColor:hsl(25, 84%, 53%);
+  --biggestFontSize:2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 10px ;
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  background: transparent;
+  z-index: 100;
+}
+.Navbar .logoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Navbar .logoDiv .icon {
+  margin-right: 0.5rem;
+}
+.Navbar .logoDiv span {
+  font-size: var(--h2FontSize);
+  justify-content: center;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .Navbar .menu {
+    position: absolute;
+    width: 70%;
+    top: -100rem;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    background: linear-gradient(40deg, rgb(114, 145, 255), rgb(42, 73, 198));
+    padding: 2rem;
+    border-radius: var(--borderRadius);
+    transition: 0.8s ease-in-out;
+    box-shadow: 0 2px 25px -5px var(--shadowColor);
+  }
+  .Navbar .menu li {
+    font-size: var(--h3FontSize);
+    font-weight: 500;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--whiteColor);
+    cursor: pointer;
+  }
+  .Navbar .menu li:hover {
+    color: var(--primaryColorLight);
+    border-bottom: 1px solid var(--primaryColorLight);
+  }
+}
+.Navbar .closeIcon {
+  position: absolute;
+  bottom: -25px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background: linear-gradient(40deg, rgb(114, 145, 255), rgb(42, 73, 198));
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px var(--shadowColor);
+}
+.Navbar .showNavbar {
+  top: 8rem;
+}
+
+.addBackground {
+  background: var(--whiteColor);
+  transition: 0.2s ease-in-out;
+}
+.addBackground .logoDiv .icon, .addBackground .logoDiv span {
+  color: var(--primaryColorDark);
+}
+
+@media screen and (min-width: 768px) {
+  .logoDiv span {
+    font-size: var(--h2FontSize);
+  }
+  .closeIcon, .menuIcon {
+    display: none;
+  }
+  .menu ul {
+    display: flex;
+    gap: 3rem;
+  }
+  .menu ul li {
+    font-size: var(--h3FontSize);
+    font-weight: 900;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+    color: var(--primaryColorDark);
+    opacity: 0.5;
+  }
+  .menu ul li:hover {
+    color: var(--primaryColor);
+    opacity: 1;
+    border-bottom: 1px solid var(--primaryColor);
+  }
+}
+@media screen and (min-width: 960px) {
+  .logoDiv {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .logoDiv {
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .logoDiv {
+    padding: 2rem;
+  }
+  .logoDiv .icon {
+    font-size: var(--h1FontSize);
+  }
+  .logoDiv span {
+    font-size: var(--h1FontSize);
+  }
+}/*# sourceMappingURL=Navbar.css.map */

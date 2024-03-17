@@ -1,0 +1,59 @@
+:root{
+    --primaryColor:#3959d7;
+    --primaryColorLight:hsl(223, 100%, 97%);
+    --primaryColorDark:hsl(216, 58%, 28%);
+    --gradientLight:rgb(114, 145,255);
+    --bgColor:hsl(0, 0%, 100%);
+    --formColor:hsl(20, 42%, 87%);
+    --whiteColor:#f5f5f9;
+    --blackColor:hsl(0, 0%, 18%);
+    --shadowColor:hsl(219, 63%, 95%);
+    --inputColor:hsl(330, 12%, 97%);
+    --cardColor:hsl(300, 3%, 94%);
+    --orangeColor:hsl(25, 84%, 53%);
+    // linear-gradient(40deg, rgb(114, 145, 255), rgb(42,73,198))
+
+
+
+    --biggestFontSize:2.5rem;
+    --h1FontSize: 1.6rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 10px
+}
+
+.sponsors{
+    padding: 1rem;
+    background-color: hsl(219, 63%, 95%);;
+
+    .secContainer{
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        img{
+            width: 80px;
+            height: 100px;
+            object-fit: contain;
+            opacity: 3;
+            &:hover{
+                opacity: 1;;
+            }
+        }
+    }
+
+
+    @media screen and (max-width:480px){
+        
+        .secContainer span:nth-child(2){
+            display: none;
+        }
+
+        .secContainer span:nth-child(3){
+            display: none;
+        }
+    }
+}

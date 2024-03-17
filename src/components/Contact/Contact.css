@@ -1,0 +1,112 @@
+:root {
+  --primaryColor:#3959d7;
+  --primaryColorLight:hsl(223, 100%, 97%);
+  --primaryColorDark:hsl(216, 58%, 28%);
+  --gradientLight:rgb(114, 145,255);
+  --bgColor:hsl(0, 0%, 100%);
+  --formColor:hsl(20, 42%, 87%);
+  --whiteColor:#f5f5f9;
+  --blackColor:hsl(0, 0%, 18%);
+  --shadowColor:hsl(219, 63%, 95%);
+  --inputColor:hsl(330, 12%, 97%);
+  --cardColor:hsl(300, 3%, 94%);
+  --orangeColor:hsl(25, 84%, 53%);
+  --biggestFontSize:2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 10px;
+}
+
+.contact .secContainer {
+  flex-direction: column;
+  flex-flow: column-reverse;
+  gap: 1.5rem;
+}
+.contact .secContainer .textDiv .secTitle {
+  text-align: left;
+}
+.contact .secContainer .textDiv .secContent {
+  gap: 1.5rem;
+}
+.contact .secContainer .textDiv .secContent .phone, .contact .secContainer .textDiv .secContent .chat, .contact .secContainer .textDiv .secContent .video, .contact .secContainer .textDiv .secContent .message {
+  display: flex;
+  padding: 2rem;
+  border-radius: var(--borderRadius);
+  border: 2px solid hsl(219, 63%, 95%);
+  flex-direction: column;
+}
+.contact .secContainer .textDiv .secContent .phone:hover, .contact .secContainer .textDiv .secContent .chat:hover, .contact .secContainer .textDiv .secContent .video:hover, .contact .secContainer .textDiv .secContent .message:hover {
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px hsl(219, 63%, 95%);
+}
+.contact .secContainer .textDiv .secContent .phone:hover button, .contact .secContainer .textDiv .secContent .chat:hover button, .contact .secContainer .textDiv .secContent .video:hover button, .contact .secContainer .textDiv .secContent .message:hover button {
+  color: var(--whiteColor);
+  background: var(--primaryColor);
+  color-interpolation-filters: var(--whiteColor);
+  box-shadow: 0 2px 8px hsl(219, 63%, 95%);
+}
+.contact .secContainer .textDiv .secContent .phone .info, .contact .secContainer .textDiv .secContent .chat .info, .contact .secContainer .textDiv .secContent .video .info, .contact .secContainer .textDiv .secContent .message .info {
+  gap: 0.8rem;
+}
+.contact .secContainer .textDiv .secContent .phone .info .icon, .contact .secContainer .textDiv .secContent .chat .info .icon, .contact .secContainer .textDiv .secContent .video .info .icon, .contact .secContainer .textDiv .secContent .message .info .icon {
+  color: var(--primaryColor);
+  font-size: var(--h1FontSize);
+  background: var(--primaryColorLight);
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: var(--borderRadius);
+}
+.contact .secContainer .textDiv .secContent .phone .info h4, .contact .secContainer .textDiv .secContent .chat .info h4, .contact .secContainer .textDiv .secContent .video .info h4, .contact .secContainer .textDiv .secContent .message .info h4 {
+  color: var(--primaryColorDark);
+}
+.contact .secContainer .textDiv .secContent .phone button, .contact .secContainer .textDiv .secContent .chat button, .contact .secContainer .textDiv .secContent .video button, .contact .secContainer .textDiv .secContent .message button {
+  margin-top: 1rem;
+  background: var(--primaryColorLight);
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--primaryColor);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact .secContainer .textDiv .secContent .active {
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px hsl(219, 63%, 95%);
+}
+.contact .secContainer .textDiv .secContent .active button {
+  background: var(--primaryColorLight);
+  color: var(--primaryColor);
+  color-interpolation-filters: var(--whiteColor);
+  box-shadow: 0 2px 8px hsl(219, 63%, 95%);
+}
+
+@media screen and (min-width: 480px) {
+  .contact .secContainer {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    gap: 1.5rem;
+  }
+  .contact .secContainer .textDiv .secContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1100px) {
+  .contact .secContainer {
+    flex-direction: row;
+    flex-flow: row-reverse;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .contact .secContainer imgDiv {
+    flex-basis: 37%;
+  }
+  .contact .secContainer .textDiv {
+    flex-basis: 45%;
+  }
+}/*# sourceMappingURL=Contact.css.map */

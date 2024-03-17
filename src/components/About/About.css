@@ -1,0 +1,139 @@
+:root {
+  --primaryColor:#3959d7;
+  --primaryColorLight:hsl(223, 100%, 97%);
+  --primaryColorDark:hsl(216, 58%, 28%);
+  --gradientLight:rgb(114, 145,255);
+  --bgColor:hsl(0, 0%, 100%);
+  --formColor:hsl(20, 42%, 87%);
+  --whiteColor:#f5f5f9;
+  --blackColor:hsl(0, 0%, 18%);
+  --shadowColor:hsl(219, 63%, 95%);
+  --inputColor:hsl(330, 12%, 97%);
+  --cardColor:hsl(300, 3%, 94%);
+  --orangeColor:hsl(25, 84%, 53%);
+  --biggestFontSize:2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 10px;
+}
+
+.about .secContainer {
+  flex-direction: column;
+  flex-flow: column-reverse;
+  gap: 1.5rem;
+}
+.about .secContainer .textDiv .secTitle {
+  text-align: left;
+}
+.about .secContainer .textDiv .secTitle h1 {
+  display: block;
+  font-weight: 700;
+  color: var(--primaryColorDark);
+}
+.about .secContainer .textDiv .secTitle p {
+  margin-bottom: 2rem;
+}
+.about .secContainer .textDiv .accordion {
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.about .secContainer .textDiv .accordion .singleAccordion {
+  width: 100%;
+}
+.about .secContainer .textDiv .accordion .singleAccordion .icon {
+  color: var(--primaryColor);
+  background: var(--primaryColorLight);
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 23px;
+}
+.about .secContainer .textDiv .accordion .singleAccordion .accordionTitle {
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid hsl(219, 63%, 95%);
+  border-radius: var(--borderRadius);
+}
+.about .secContainer .textDiv .accordion .singleAccordion .accordionTitle .flex {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.about .secContainer .textDiv .accordion .singleAccordion .accordionTitle .flex .titleText {
+  font-weight: 600;
+  color: var(--primaryColorDark);
+  font-size: var(--normalFontSize);
+}
+.about .secContainer .textDiv .accordion .singleAccordion .description {
+  font-size: var(--normalFontSize);
+  display: flex;
+  align-items: center;
+  align-items: center;
+  width: 100%;
+  line-height: 25px;
+  height: 0px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+  opacity: 0;
+  padding: 0.3rem 1rem 1.5rem;
+  color: var(--primaryColorDark);
+}
+.about .secContainer .textDiv .accordion .singleAccordion .show {
+  height: 185px;
+  opacity: 0.7;
+}
+.about .secContainer .textDiv .accordion .singleAccordion .activeTitle {
+  border: 1px solid transparent;
+}
+.about .secContainer .textDiv .accordion .activeAccordion {
+  box-shadow: 0 4px 8px var(--shadowColor);
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--shadowColor);
+}
+
+@media screen and (min-width: 520px) {
+  .about .secContainer textDiv {
+    flex-basis: 50%;
+  }
+  .about .secContainer textDiv .accordion {
+    gap: 1rem;
+  }
+  .about .secContainer textDiv .accordion .singleAccordion {
+    width: 100%;
+  }
+  .about .secContainer textDiv .accordion .singleAccordion .description {
+    padding: 1.5rem 1rem;
+  }
+}
+@media screen and (min-width: 720px) {
+  .about .secContainer {
+    flex-direction: row !important;
+    gap: 2rem;
+    height: 100%;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .about .secContainer {
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .about .secContainer .textDiv {
+    flex-basis: 45%;
+  }
+  .about .secContainer .textDiv .singleAccordion .description {
+    padding: 0 1rem 1.5rem;
+  }
+  .about .secContainer .textDiv .singleAccordion .show {
+    height: 100%;
+  }
+  .about .imgDiv {
+    flex-basis: 40%;
+  }
+}/*# sourceMappingURL=About.css.map */
